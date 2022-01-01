@@ -1,4 +1,4 @@
-package com.housekeepingbook.housekeepingbook;
+package com.toyproject.housekeepingbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
