@@ -6,23 +6,19 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
 public class Income extends BasicInfo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private Long basicInfoId;
-
+    @Enumerated(EnumType.STRING)
     private IncomeCategory category;
 
-    public Income(Long basicInfoId, IncomeCategory category) {
-        this.basicInfoId = basicInfoId;
+    public Income(IncomeCategory category) {
         this.category = category;
     }
 }
